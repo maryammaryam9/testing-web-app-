@@ -1,0 +1,296 @@
+@use '../global/config.scss' as *;
+@use '../global/variable.scss' as *;
+
+.bs-form {
+  .form-group {
+    background: $clr-root;
+    border: 1px solid #CCCCFF;
+    padding: 1.2rem;
+    @include border-radius(0.8rem);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    &:focus-within {
+      border: 1px solid #9999FF;
+      background: #F8FAFB;
+    }
+
+    .form-label {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      color: #4D4D4D;
+      margin-bottom: 0.4rem;
+      position: absolute;
+      top: 1.2rem;
+
+      .form-group.mb-0 {
+        margin-bottom: 0;
+
+      }
+
+      .text-danger {
+        color: #F5665E;
+        margin-left: .2rem
+      }
+    }
+
+    &.text-area {
+      margin-bottom: 3.6rem;
+    }
+
+    .form-control {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      font-family: $font-regular;
+      color: #1A1A1A;
+      background: transparent;
+      width: 100%;
+      padding: 0;
+      padding-top: 1.8rem;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-appearance: none;
+
+      &:focus {
+        &~.formGroup {
+          border: 1px solid #9999FF;
+          background: #F8FAFB;
+        }
+      }
+
+      &.disabled {
+        color: #CCCCCC;
+        pointer-events: none;
+        cursor: default;
+      }
+
+      &.textarea {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-family: $font-regular;
+        color: #1A1A1A;
+        resize: none;
+        padding-top: 0rem;
+        min-height: 6.2rem;
+        width: 100%;
+        overflow: auto;
+        margin-top: 2rem;
+      }
+
+      option {
+        color: #4D4D4D;
+      }
+
+      .react-select-suggestion__control {
+        background-color: transparent;
+        padding: .8rem 1.2rem 1.2rem;
+
+        .react-select-suggestion__single-value {
+          color: #1A1A1A;
+        }
+
+        &:after {
+          content: '\e902';
+          font-family: "icomoon" !important;
+          display: inline-block;
+          box-sizing: border-box;
+          color: #333333;
+          font-size: 2.5rem;
+          margin-top: -10px;
+        }
+        &.react-select-suggestion__control--menu-is-open{
+          &:after{rotate: 180deg;}
+        }
+      }
+
+      .react-select-suggestion__menu {
+        z-index: 2;
+        border: 1px solid #CCCCFF;
+        border-radius: 0.8rem;
+        box-shadow: none;
+      }
+
+    }
+
+    .btn-wrap {
+      position: sticky;
+      bottom: 0;
+      width: 100%;
+      padding: 2rem 0;
+      background: #ffff;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, #FFFFFF 100%);
+
+      .btn-default {
+        width: 100%;
+      }
+    }
+
+    .btn-link {
+      position: absolute;
+      top: 50%;
+      right: 1.2rem;
+      @include transform(translateY(-50%));
+    }
+
+    &.typ-error {
+      border: 1px solid #F5665E;
+    }
+
+    &.typ-otp {
+      .timer-wrap {
+        position: absolute;
+        bottom: -2rem;
+        right: 0;
+
+        .timer {
+          font-family: $font-regular;
+          color: #666666;
+          font-size: 1rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
+
+    .character-count {
+      font-size: 12px;
+      font-family: $font-regular;
+      color: #B3B3B3;
+      position: absolute;
+      right: 0;
+      bottom: -2.3rem;
+    }
+
+    &.typ-number {
+      padding: 0;
+      border: 0;
+      max-width: 12.8rem;
+
+      &:focus-within {
+        background-color: transparent;
+      }
+
+      .form-label {
+        position: relative;
+        top: 0;
+        margin-bottom: 0.8rem;
+      }
+
+    }
+
+    &.first {
+      margin-right: 2rem;
+    }
+  }
+
+  .cp-checkbox {
+    .form-control {
+      padding: 0;
+      height: initial;
+      width: initial;
+      margin-bottom: 0;
+      display: none;
+      cursor: pointer;
+
+      &:checked {
+        &+.form-label {
+          &:before {
+            border: 1px solid $clr-icon;
+            background: #E5E5FF;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: 9px;
+            width: 5px;
+            height: 12px;
+            border: solid $clr-icon;
+            border-width: 0 1px 1px 0;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+
+    .form-label {
+      position: relative;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 2px solid #0079bf;
+        padding: 1.1rem;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-right: 1.2rem;
+        border: 1px solid #CCCCFF;
+        @include border-radius(0.8rem);
+      }
+    }
+  }
+
+  .count-wrap {
+    display: flex;
+    // gap: 3.4rem;
+    // margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+
+    .count-input {
+      display: flex;
+      // margin-top: 3.5rem;
+      background-color: #F8FAFB;
+      border: 1px solid #CCCCFF;
+      border-radius: 0.8rem;
+      padding: 1.2rem;
+      text-align: center;
+
+      .form-control {
+        padding-top: 0;
+        text-align: center;
+
+      }
+
+
+      .icon {
+        width: 2.4rem;
+        line-height: 2.4rem;
+        font-size: 2.4rem;
+        color: #333333;
+        font-family: $font-light;
+        &.disabled{
+          opacity: 0.3;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+
+.form-group:has(> .form-control .react-select-suggestion__control) {
+  padding: 0;
+
+  .form-label {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
+.form-control::-webkit-outer-spin-button,
+.form-control::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+/* Firefox */
+.form-control[type=number] {
+  -moz-appearance: textfield !important;
+}

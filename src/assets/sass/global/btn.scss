@@ -1,0 +1,66 @@
+@use '../global/config.scss' as *;
+@use '../global/variable.scss' as *;
+
+.btn-default {
+  padding: 1.2rem 2.4rem 1.2rem 2.4rem;
+  border-radius: 1.2rem;
+  font-family: $font-medium;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  background:  linear-gradient(90deg, #4D4D4D 0%, #0D0D0D 100%);
+  color: $clr-root;
+  border: 1px solid #0D0D0D;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+  // min-width: 11.3rem;
+  display: inline-block;
+
+  &.anc-default {
+    display: inline-block;
+  }
+
+  &:hover {
+    background-color: $clr-root;
+    color: #0D0D0D;
+  }
+
+  &.typ-secondary {
+    background-color: $clr-root;
+    color: $clr-primary;
+
+    &:hover {
+      background-color: $clr-primary;
+      color: $clr-root;
+    }
+  }
+
+  & + .btn-default {
+    margin: 0;
+  }
+
+  &:disabled,
+  &.btn-disable, 
+  &.btn-default-disable {
+    cursor: default;
+    pointer-events: none;
+    background: #F3F5F7;
+    color: #CCCCCC;
+    border: 1px solid #F3F5F7;
+  }
+}
+
+.btn-link {
+  margin: 0rem;
+  font-family: $font-medium;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: normal;
+  text-align: center;
+  color: $clr-primary;
+  border: none;
+  background: none;
+  &:disabled{
+    color: #CCCCCC;
+  }
+}

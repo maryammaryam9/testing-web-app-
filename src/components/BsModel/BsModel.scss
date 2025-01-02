@@ -1,0 +1,93 @@
+@use '../../assets/sass/global/config.scss' as *;
+@use '../../assets/sass/global/variable.scss' as *;
+
+
+.BsModal {
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.502);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+        display: none;
+        &.show {
+            opacity: 1;
+            pointer-events: all;
+            display: block;
+        }
+    }
+
+    .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 2.4rem;
+        z-index: 1001;
+        max-width: 40rem;
+        @include border-radius(2rem);
+        text-align: center;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        display: none;
+
+        &.show {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            display: block;
+        }
+        .close-btn{
+            font-size: 1.6rem;
+            color: #333333;
+            font-weight: 600;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+        }
+
+        .icon {
+            color: #F5665E;
+            font-size: 4.3rem;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-family: $font-medium;
+            margin-top: 1.8rem;
+            color: $clr-base;
+        }
+
+        .description {
+            font-size: 1.4rem;
+            color: #666666;
+            line-height: 2rem;
+            margin-top: 0.8rem;
+        }
+
+        .modal-btn {
+            width: 100%;
+            background: linear-gradient(100.55deg, $clr-icon 0%, $clr-primary 100%);
+            @include border-radius(1.2rem);
+            padding: 1.2rem;
+            color: #FFFFFF;
+            font-family: $font-medium;
+            margin-top: 2rem;
+        }
+
+        .proceed {
+            color: $clr-icon;
+            font-size: 1.4rem;
+            font-family: $font-medium;
+            margin-top: 1.6rem;
+        }
+    }
+
+}

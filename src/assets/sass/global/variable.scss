@@ -1,0 +1,27 @@
+/* colors */
+
+$clr-root: #ffffff;
+$clr-base: #000000;
+$clr-primary: #000099;
+$clr-bg: #1e1e1e;
+$clr-icon: #0001FF;
+
+/*font family*/
+
+// Poppins
+$font-light: 'Poppins-Light'; //300
+$font-regular: 'Poppins-Regular'; //400
+$font-medium: 'Poppins-Medium'; //500
+$font-bold: 'Poppins-Bold'; //900
+
+/* breakpoints */
+
+$media-xs: 576px;
+$media-sm: 768px;
+$media-sm-min: 767px;
+$media-tab: 992px;
+$media-md-min: 993px;
+$media-md: 1024px;
+$media-mobile: 1023px;
+$media-lg: 1366px;
+$media-xl: 1600px;

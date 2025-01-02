@@ -1,0 +1,121 @@
+@use '../../assets/sass/global/config.scss' as *;
+@use '../../assets/sass/global/variable.scss' as *;
+
+.markdown-section{
+  h2{
+    font-size: 24px;
+  }
+  ul{
+    padding-left: 3.6rem;
+  }
+
+  ul,li{
+    list-style: disc;
+    
+  }
+  p,li{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #666666;
+    font-family: $font-regular;
+    margin-bottom: 2rem;
+  }
+  h2{
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #1A1A1A;
+    font-family: $font-medium;
+    margin-bottom: 2rem;
+  }
+  h3{
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+    margin-bottom: 1.8rem;
+  }
+  h4,h5,h6{
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 1.6rem;
+  }
+  table {
+    width: 100%;
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+    caption {
+        font-family: $font-bold;
+        color: #4D4D4D;
+        font-size: 1.6rem;
+        text-align: left;
+        padding: 1.2rem;
+    }
+
+    thead {
+      border-radius: 10px;
+        th {
+            color: $clr-base;
+            text-align: center;
+            padding: 0.8rem;
+            background-color: #E5E5E5;
+            font-family: $font-medium;
+            font-size: 1.4rem;
+            text-align: left;
+        }
+    }
+
+    tbody {
+        tr {
+          border-bottom: 0.5px solid #E5E5E5;
+            &:nth-child(4n + 1) td,
+            &:nth-child(4n + 2) td {
+                background-color:$clr-root;;
+            }
+            
+            &:nth-child(4n + 3) td,
+            &:nth-child(4n + 4) td {
+                background-color:#F8FAFB;
+            }
+            td {
+                padding: 1.2rem 0.8rem;
+                font-size: 1.6rem;
+                color: #666666;
+                line-height: 2.4rem;
+                text-align: left;
+                vertical-align: top;
+
+                // &:first-child {
+                //     text-align: center;
+                // }
+
+                .post-title {
+                    font-size: 1.4rem;
+                    color: #1A1A1A;
+                    display: block;
+                    font-family: $font-medium;
+                }
+
+                .hashtag {
+                    display: block;
+                }
+
+                .icon {
+                    @include border-radius(50%);
+                    background-color: #F3F5F7;
+                    width: 3.6rem;
+                    height: 3.6rem;
+                    line-height: 3.6rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.8rem;
+                    position: relative;
+                    color: $clr-base;
+                    padding: 0.6rem;
+                    margin: auto;
+                }
+            }
+
+        }
+    }
+
+}
+}

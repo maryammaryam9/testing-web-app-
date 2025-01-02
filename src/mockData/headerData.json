@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "title": "Social Media",
+      "items": [
+        { "text": "X.com Post", "icon": "icon-twitter", "link": "#" },
+        { "text": "LinkedIn Post", "icon": "icon-linkedin", "link": "#" },
+        { "text": "Instagram Caption", "icon": "icon-insta", "link": "#" },
+        { "text": "Social Media Calendar", "icon": "icon-media", "link": "#" }
+      ]
+    },
+    {
+      "title": "Copywriting",
+      "items": [
+        { "text": "Article", "icon": "icon-article", "link": "#" },
+        { "text": "Email/ Letter", "icon": "icon-email", "link": "#" },
+        { "text": "Transcript", "icon": "icon-transcript", "link": "#" },
+        { "text": "Rewriter", "icon": "icon-re-writter", "link": "#" },
+        { "text": "TOV Recreator", "icon": "icon-tov-recreator", "link": "#" },
+        { "text": "Speech", "icon": "icon-speech", "link": "#" }
+      ]
+    },
+    {
+      "title": "SEO",
+      "items": [
+        { "text": "Product Description", "icon": "icon-product-desc", "link": "#" },
+        { "text": "Website Blog", "icon": "icon-website-blog", "link": "#" },
+        { "text": "A/B Testing", "icon": "icon-presentation", "link": "#" }
+      ]
+    },
+    {
+      "title": "BUSINESS",
+      "items": [
+        { "text": "Business Proposal", "icon": "icon-business-proposal", "link": "#" },
+        { "text": "Business Requirement Document", "icon": "icon-business-doc", "link": "#" },
+        { "text": "Presentation Outline", "icon": "icon-presentation", "link": "#" }
+      ]
+    },
+    {
+      "title": "DATA VISUALIZATION",
+      "items": [
+        { "text": "Organization Chart", "icon": "icon-organisation-chart", "link": "#" },
+        { "text": "Process Flow Chart", "icon": "icon-flow-chart", "link": "#" },
+        { "text": "Mindmap", "icon": "icon-mind-map", "link": "#" }
+      ]
+    },
+    {
+      "title": "DESIGN IMAGE",
+      "items": [
+        { "text": "Art Illustration", "icon": "icon-art", "link": "#" },
+        { "text": "Visual Concept", "icon": "icon-visual-concept", "link": "#" },
+        { "text": "Scene Visualization", "icon": "icon-screen-visual", "link": "#" },
+        { "text": "Presentation Visuals", "icon": "icon-present-visual", "link": "#" },
+        { "text": "Product Concept Image", "icon": "icon-product-concept", "link": "#" },
+        { "text": "Marketing Visuals", "icon": "icon-market-visual", "link": "#" },
+        { "text": "Cover Art", "icon": "icon-cover-art", "link": "#" },
+        { "text": "Social Media", "icon": "icon-Social-media", "link": "#" },
+        { "text": "Blog Illustration", "icon": "icon-blog", "link": "#" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+@use '../global/config.scss' as *;
+@use '../global/variable.scss' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    font-size: 8.2px;
+  }
+  @media (min-width: 1279px) and (max-width: 1400px) {
+    font-size: 8.9px;
+  }
+  @media (min-width: 1600px) {
+    font-size: 12.4px;
+  }
+}
+
+body {
+  font-family: $font-regular;
+  // background: $clr-root;
+  width: 100%;
+  color: $clr-base;
+  overflow-x: hidden;
+  scrollbar-gutter: initial;
+  position: relative;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $clr-primary;
+    opacity: 0.8;
+  }
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    opacity: 1;
+  }
+  @media only screen and (max-width: $media-xl) {
+    font-size: 13px;
+  }
+}
+.main{
+  // background: #F8FAFB url('../../images/bg-image.png') bottom left no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  @media only screen and (max-width: $media-mobile) {
+    overflow: hidden;
+  }
+
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F8FAFB;
+    opacity: 0.7;
+    z-index: -1;
+  }
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  transition: all 0.2s;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-family: $font-regular;
+  color: $clr-base;
+  text-transform: initial;
+  @media only screen and (max-width: $media-mobile) {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}
+
+.cm-not-in-page {
+  position: absolute;
+  left: -99999px;
+  top: -99999px;
+}
+
+.cm-line-break {
+  display: block;
+}
+
+.js-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  .bg-img {
+    display: none;
+  }
+}
+
+.cm-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  transition: 0.5s ease-in-out;
+  background: rgba(247, 247, 247, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  touch-action: auto;
+  -ms-touch-action: auto;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    z-index: 4;
+    touch-action: none;
+    -ms-touch-action: none;
+  }
+}
+
+.cm-overflow-hidden {
+  overflow: hidden ;
+  position: relative;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+.container {
+  // max-width: 117rem;
+  margin: 0px auto;
+  padding: 0px;
+  width: 65%;
+  position: relative;
+  @media only screen and (max-width: $media-mobile) {
+    width: 100%;
+    padding: 0rem 2.4rem;
+    max-width: auto;
+  }
+}
+
+.cm-bold {
+  font-family: $font-bold;
+}
+
+.cm-medium {
+  font-family: $font-medium;
+}
+
+.cm-light {
+  font-family: $font-light;
+}
+
+.cm-regular {
+  font-family: $font-regular;
+}
+
+.cm-line-break{
+  display: block;
+}
+
+.hide {
+  display: none !important;
+}
+
+footer {
+  position: relative;
+  margin-bottom: -2rem;
+}
+.page-content{
+  background-color: #F8FAFB;
+}
+.cm-desktop{
+  display: block;
+  @media only screen and (max-width: $media-mobile) {
+    display: none;
+  }
+}
+.cm-mobile{
+  display: none;
+  @media only screen and (max-width: $media-mobile) {
+    display: block;
+    background: #000;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.8;
+    overflow: hidden;
+    img{
+      position: absolute;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-67%);
+    }
+  }
+}

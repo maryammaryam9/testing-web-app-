@@ -1,0 +1,1843 @@
+{
+  "Open Research": {
+    "Baseroute": "/api/v1",
+    "Category": "Open Research",
+    "Options": [
+      {
+        "Description": "Generate a Twitter post based on the topic, mood, tone, target audience, and hashtags.",
+        "Fields": [
+          {
+            "label": "Topic",
+            "name": "postTopicText",
+            "placeholder": "What is your post going to be about?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Bet a mood",
+            "name": "postMoodSelector",
+            "options": [
+              "Happy",
+              "Sad",
+              "Excited",
+              "Angry",
+              "Informative"
+            ],
+            "placeholder": "What is the mood of your post like?",
+            "required": true,
+            "type": "select"
+          },
+          {
+            "label": "Tone of voice",
+            "name": "postToneSelector",
+            "options": [
+              "Formal",
+              "Informal",
+              "Humorous",
+              "Serious"
+            ],
+            "placeholder": "What tone do you want your post to have?",
+            "required": false,
+            "type": "select"
+          },
+          {
+            "label": "Target Audience",
+            "name": "postTargetAudience",
+            "placeholder": "Who is your target audience for this post?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Hashtags",
+            "name": "postHashtags",
+            "placeholder": "What hashtags would you like to include in your post?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-twitter",
+        "Method": "POST",
+        "Name": "X.com Post",
+        "Route": "/x-twitter-post",
+        "PageRoute": "/toolkit/social-media/x-twitter-post",
+        "Suggestions": [
+          "X.com Post for a Jewellery",
+          "X.com Post for a Jam",
+          "X.com Post for a Celebrity"
+        ]
+      },
+      {
+        "Description": "Generate an article based on the type, topic, audience, tone, and common pitfalls.",
+        "Fields": [
+          {
+            "label": "Article Type",
+            "name": "articleType",
+            "options": [
+              "Academic",
+              "Business",
+              "Literature"
+            ],
+            "placeholder": "What type of article do you want to create?",
+            "required": true,
+            "type": "select"
+          },
+          {
+            "label": "Article Topic",
+            "name": "topic",
+            "placeholder": "What is the topic of your article?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Target Audience",
+            "name": "audienceType",
+            "placeholder": "Who is your target audience for this article?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Tone",
+            "name": "tone",
+            "options": [
+              "Formal",
+              "Informal",
+              "Professional"
+            ],
+            "placeholder": "What tone do you want your article to have?",
+            "required": false,
+            "type": "select"
+          },
+          {
+            "label": "To Avoid",
+            "name": "commonPitfalls",
+            "placeholder": "What common pitfalls do you want to avoid in your article?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-article",
+        "Method": "POST",
+        "Name": "Article",
+        "Route": "/article",
+        "PageRoute": "/toolkit/copywriter/article",
+        "Suggestions": [
+          "Article about Climate Change",
+          "Article about Artificial Intelligence",
+          "Article about Personal Finance Tips"
+        ]
+      },
+      {
+        "Description": "Compose a business proposal based on the objective, audience, and tone.",
+        "Fields": [
+          {
+            "label": "Objective",
+            "name": "proposalObjective",
+            "placeholder": "What is the objective of your proposal?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Target Audience",
+            "name": "audience",
+            "placeholder": "Who is the audience for your proposal?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Tone",
+            "name": "tone",
+            "options": [
+              "Persuasive",
+              "Professional"
+            ],
+            "placeholder": "What tone do you want your proposal to have?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-business-proposal",
+        "Method": "POST",
+        "Name": "Business Proposal",
+        "Route": "/biz-proposal",
+        "PageRoute": "/toolkit/executive/biz-proposal",
+        "Suggestions": [
+          "Proposal for a Marketing Campaign",
+          "Proposal for a New Product Launch",
+          "Proposal for a Partnership Opportunity"
+        ]
+      },
+      {
+        "Description": "Generate a product description based on the product name, purpose, and keywords.",
+        "Fields": [
+          {
+            "label": "Product Name",
+            "name": "productName",
+            "placeholder": "What is the name of your product?",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "label": "Purpose",
+            "name": "purpose",
+            "placeholder": "What is the purpose of your product description?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Keywords",
+            "name": "listKeywords",
+            "placeholder": "What keywords would you like to include?",
+            "required": true,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-product-desc",
+        "Method": "POST",
+        "Name": "Product Description",
+        "Route": "/description",
+        "PageRoute": "/toolkit/seo/description",
+        "Suggestions": [
+          "SEO-optimized Description for an Electronic Gadget",
+          "SEO-optimized Description for a Clothing Item",
+          "SEO-optimized Description for a Kitchen Appliance"
+        ]
+      },
+      {
+        "Description": "Generate an organizational chart based on the company type description, company name, and roles and relationships.",
+        "Fields": [
+          {
+            "label": "Company Type Description",
+            "name": "companyTypeDescription",
+            "placeholder": "What type of company is this chart for?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Company Name",
+            "name": "companyName",
+            "placeholder": "What is the name of the company?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Roles and Relationships",
+            "name": "rolesAndRelationships",
+            "placeholder": "Any specific details about roles and relationships?",
+            "required": false,
+            "type": "textarea"
+          }
+        ],
+        "Icon": "icon-organisation-chart",
+        "Method": "POST",
+        "Name": "Organization Chart",
+        "Route": "/org-chart",
+        "PageRoute": "/toolkit/dataviz/org-chart",
+        "Suggestions": [
+          "Organization Chart for a Corporate Structure",
+          "Organization Chart for a Non-Profit Organization",
+          "Organization Chart for a Small Business Team"
+        ]
+      },
+      {
+        "Description": "Generate art/illustrations based on an artistic concept",
+        "Fields": [
+          {
+            "label": "Prompt",
+            "name": "prompt",
+            "placeholder": "What is the main prompt for the image generation?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Description",
+            "name": "description",
+            "placeholder": "Any additional description for the image?",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": "Art Style",
+            "name": "artStyle",
+            "placeholder": "What style of art do you want?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Mood/Tone",
+            "name": "artMoodTone",
+            "placeholder": "What mood or tone do you want for the art?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Image Count",
+            "name": "imageCount",
+            "placeholder": "How many images do you want to generate?",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "label": "Aspect Ratio",
+            "name": "aspectRatio",
+            "options": [
+              "1:1",
+              "4:3",
+              "16:9",
+              "3:4",
+              "9:16"
+            ],
+            "placeholder": "What aspect ratio do you want for the images?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-art",
+        "Method": "POST",
+        "Name": "Art Illustration",
+        "Route": "/creative/art-illustration",
+        "PageRoute": "/toolkit/image/art-illustration",
+        "Suggestions": []
+      }
+    ]
+  },
+  "Social Media": {
+    "Baseroute": "/api/v1/toolkit/influencer",
+    "Category": "Social Media Generators",
+    "Options": [
+      {
+        "Description": "Generate a Twitter post based on the topic, mood, tone, target audience, and hashtags.",
+        "Fields": [
+          {
+            "label": "Topic",
+            "name": "postTopicText",
+            "placeholder": "What is your post going to be about?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Bet a mood",
+            "name": "postMoodSelector",
+            "options": [
+              "Happy",
+              "Sad",
+              "Excited",
+              "Angry",
+              "Informative"
+            ],
+            "placeholder": "What is the mood of your post like?",
+            "required": true,
+            "type": "select"
+          },
+          {
+            "label": "Tone of voice",
+            "name": "postToneSelector",
+            "options": [
+              "Formal",
+              "Informal",
+              "Humorous",
+              "Serious"
+            ],
+            "placeholder": "What tone do you want your post to have?",
+            "required": false,
+            "type": "select"
+          },
+          {
+            "label": "Target Audience",
+            "name": "postTargetAudience",
+            "placeholder": "Who is your target audience for this post?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Hashtags",
+            "name": "postHashtags",
+            "placeholder": "What hashtags would you like to include in your post?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-twitter",
+        "Method": "POST",
+        "Name": "X.com Post",
+        "Route": "/x-twitter-post",
+        "PageRoute": "/toolkit/social-media/x-twitter-post",
+        "Suggestions": [
+          "X.com Post for a Jewellery",
+          "X.com Post for a Jam",
+          "X.com Post for a Celebrity"
+        ]
+      },
+      {
+        "Description": "Generate a LinkedIn post based on the topic, industry, mood, tone, and hashtags.",
+        "Fields": [
+          {
+            "label": "Topic",
+            "name": "postTopicText",
+            "placeholder": "What is your post going to be about?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Industry",
+            "name": "postIndustrySelector",
+            "options": [
+              "Technology",
+              "Finance",
+              "Healthcare",
+              "Education",
+              "Marketing"
+            ],
+            "placeholder": "Which industry does your post relate to?",
+            "required": true,
+            "type": "select"
+          },
+          {
+            "label": "Set a Mood",
+            "name": "postMoodSelector",
+            "options": [
+              "Professional",
+              "Casual",
+              "Motivational",
+              "Informative"
+            ],
+            "placeholder": "What is the mood of your post like?",
+            "required": false,
+            "type": "select"
+          },
+          {
+            "label": "Tone of Voice",
+            "name": "postToneSelector",
+            "options": [
+              "Formal",
+              "Informal",
+              "Humorous",
+              "Serious"
+            ],
+            "placeholder": "What tone do you want your post to have?",
+            "required": false,
+            "type": "select"
+          },
+          {
+            "label": "Hashtags",
+            "name": "postHashtags",
+            "placeholder": "What hashtags would you like to include in your post?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-linkedin",
+        "Method": "POST",
+        "Name": "LinkedIn Post",
+        "Route": "/linkedin-post",
+        "PageRoute": "/toolkit/social-media/linkedin-post",
+        "Suggestions": [
+          "LinkedIn Post for a Job",
+          "LinkedIn Post for a New Title",
+          "LinkedIn Post for a Company"
+        ]
+      },
+      {
+        "Description": "Generate an Instagram caption based on the topic, mood, tone, and hashtags.",
+        "Fields": [
+          {
+            "label": "Topic",
+            "name": "captionTopicText",
+            "placeholder": "Describe your post which will be having this caption",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Set a Mood",
+            "name": "captionMoodSelector",
+            "options": [
+              "Happy",
+              "Sad",
+              "Excited",
+              "Angry",
+              "Informative"
+            ],
+            "placeholder": "What is the mood of your post like?",
+            "required": true,
+            "type": "select"
+          },
+          {
+            "label": "Tone of Voice",
+            "name": "captionToneSelector",
+            "options": [
+              "Formal",
+              "Informal",
+              "Humorous",
+              "Serious"
+            ],
+            "placeholder": "What tone do you want your caption to have?",
+            "required": false,
+            "type": "select"
+          },
+          {
+            "label": "Hashtags",
+            "name": "captionHashtags",
+            "placeholder": "What hashtags would you like to include in your caption?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-insta",
+        "Method": "POST",
+        "Name": "Instagram Caption",
+        "Route": "/instagram-caption",
+        "PageRoute": "/toolkit/social-media/instagram-caption",
+        "Suggestions": [
+          "Instagram Post for a Trip",
+          "Instagram Post for a Celebration",
+          "Instagram Post for a Journey"
+        ]
+      },
+      {
+        "Description": "Generate a social media content calendar based on the number of weeks, platforms, goal, and other optional parameters.",
+        "Fields": [
+          {
+            "label": "Topic",
+            "name": "captionTopicText",
+            "placeholder": "Describe your post which will be having this caption",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Number of Weeks",
+            "name": "calendarWeekCount",
+            "placeholder": "How many weeks should the calendar cover?",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "label": "Target Platforms",
+            "name": "calendarPlatforms",
+            "placeholder": "Which platforms should the calendar cover?",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "label": "Goal",
+            "name": "calendarGoal",
+            "placeholder": "What is the goal of the calendar?",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "label": "Tone of Voice",
+            "name": "calendarPlatformWiseTone",
+            "options": [
+              "Formal",
+              "Informal",
+              "Casual"
+            ],
+            "placeholder": "What tone do you want for each platform?",
+            "required": false,
+            "type": "select"
+          },
+          {
+            "label": "Target Industry",
+            "name": "calendarIndustry",
+            "placeholder": "Which industry does the calendar focus on?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Frequency of Post Per Week",
+            "name": "calendarPostFrequency",
+            "placeholder": "What is the weekly post frequency?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Type of Post",
+            "name": "calendarPostTypes",
+            "placeholder": "What types of posts should be included?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Hashtags",
+            "name": "calendarPostHashtags",
+            "placeholder": "What hashtags should be included?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-media",
+        "Method": "POST",
+        "Name": "Social Media Calendar",
+        "Route": "/calendar",
+        "PageRoute": "/toolkit/social-media/calendar",
+        "Suggestions": [
+          "Social Media Calendar for a Technology",
+          "Social Media Calendar for a Workout"
+        ]
+      }
+    ]
+  },
+  "Copywriting": {
+    "Baseroute": "/api/v1/toolkit/copywriter",
+    "Category": "Copywriting Tools",
+    "Options": [
+      {
+        "Description": "Generate an article based on the type, topic, audience, tone, and common pitfalls.",
+        "Fields": [
+          {
+            "label": "Article Type",
+            "name": "articleType",
+            "options": [
+              "Academic",
+              "Business",
+              "Literature"
+            ],
+            "placeholder": "What type of article do you want to create?",
+            "required": true,
+            "type": "select"
+          },
+          {
+            "label": "Article Topic",
+            "name": "topic",
+            "placeholder": "What is the topic of your article?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Target Audience",
+            "name": "audienceType",
+            "placeholder": "Who is your target audience for this article?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Tone",
+            "name": "tone",
+            "options": [
+              "Formal",
+              "Informal",
+              "Professional"
+            ],
+            "placeholder": "What tone do you want your article to have?",
+            "required": false,
+            "type": "select"
+          },
+          {
+            "label": "To Avoid",
+            "name": "commonPitfalls",
+            "placeholder": "What common pitfalls do you want to avoid in your article?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-article",
+        "Method": "POST",
+        "Name": "Article",
+        "Route": "/article",
+        "PageRoute": "/toolkit/copywriter/article",
+        "Suggestions": [
+          "Article about Climate Change",
+          "Article about Artificial Intelligence",
+          "Article about Personal Finance Tips"
+        ]
+      },
+      {
+        "Description": "Compose an email or letter based on the purpose, recipient role, tone, and common errors.",
+        "Fields": [
+          {
+            "label": "Purpose",
+            "name": "purpose",
+            "placeholder": "What is the purpose of your email or letter?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Recipient Role",
+            "name": "recipientRole",
+            "placeholder": "What is the role of the recipient?",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "label": "Tone",
+            "name": "tone",
+            "options": [
+              "Formal",
+              "Casual",
+              "Professional"
+            ],
+            "placeholder": "What tone do you want your email or letter to have?",
+            "required": false,
+            "type": "select"
+          },
+          {
+            "label": "To Avoid",
+            "name": "commonErrors",
+            "placeholder": "What common errors do you want to avoid in your email or letter?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-email",
+        "Method": "POST",
+        "Name": "Email/Letter",
+        "Route": "/letter",
+        "PageRoute": "/toolkit/copywriter/letter",
+        "Suggestions": [
+          "Email for Job Application",
+          "Letter for Complaint Resolution",
+          "Email for Event Invitation"
+        ]
+      },
+      {
+        "Description": "Generate a transcript based on the duration, topic, and tone.",
+        "Fields": [
+          {
+            "label": "Transcript Duration (in minutes)",
+            "name": "durationInMinutes",
+            "placeholder": "What is the duration of the transcript in minutes?",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "label": "Topic",
+            "name": "topic",
+            "placeholder": "What is the topic of your transcript?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Tone",
+            "name": "tone",
+            "options": [
+              "Engaging",
+              "Informative",
+              "Persuasive"
+            ],
+            "placeholder": "What tone do you want your transcript to have?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-transcript",
+        "Method": "POST",
+        "Name": "Transcript",
+        "Route": "/transcripter",
+        "PageRoute": "/toolkit/copywriter/transcripter",
+        "Suggestions": [
+          "Transcript for a Podcast Episode",
+          "Transcript for an Interview",
+          "Transcript for a Webinar"
+        ]
+      },
+      {
+        "Description": "Rewrite content based on the notes, intended use, and tone.",
+        "Fields": [
+          {
+            "label": "Source Notes",
+            "name": "notes",
+            "placeholder": "What are the notes for the content to be rewritten?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Intended Use",
+            "name": "intendedUse",
+            "placeholder": "What is the intended use of the rewritten content?",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "label": "Tone",
+            "name": "tone",
+            "options": [
+              "Professional",
+              "Informal"
+            ],
+            "placeholder": "What tone do you want the rewritten content to have?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-re-writter",
+        "Method": "POST",
+        "Name": "Rewriter",
+        "Route": "/rewriter",
+        "PageRoute": "/toolkit/copywriter/rewriter",
+        "Suggestions": [
+          "Rewrite a Blog Post for SEO",
+          "Rewrite a Business Proposal",
+          "Rewrite a Product Description"
+        ]
+      },
+      {
+        "Description": "Recreate content based on the past content, content type, content topic, content goal, target audience, and keywords.",
+        "Fields": [
+          {
+            "label": "Past Content",
+            "name": "pastContent",
+            "placeholder": "What is the past content you want to recreate?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Target Content Type",
+            "name": "contentType",
+            "placeholder": "What is the type of content you want to create?",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "label": "Topic",
+            "name": "contentTopic",
+            "placeholder": "What is the topic of your content?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Content Goal",
+            "name": "contentGoal",
+            "placeholder": "What is the goal of your content?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Target Audience",
+            "name": "targetAudience",
+            "placeholder": "Who is the target audience for your content?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Keywords",
+            "name": "keywords",
+            "placeholder": "What keywords would you like to include in your content?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-tov-recreator",
+        "Method": "POST",
+        "Name": "TOV Recreator",
+        "Route": "/tov-recreator",
+        "PageRoute": "/toolkit/copywriter/tov-recreator",
+        "Suggestions": [
+          "Recreate TOV for a Marketing Campaign",
+          "Recreate TOV for a Professional Blog",
+          "Recreate TOV for a Social Media Post"
+        ]
+      },
+      {
+        "Description": "Generate a speech based on the event type, topic, objectives, key themes, style, audience, and special requests.",
+        "Fields": [
+          {
+            "label": "Event Type",
+            "name": "eventType",
+            "options": [
+              "Business",
+              "Conference",
+              "Get-together",
+              "Academic Forum"
+            ],
+            "placeholder": "What type of event is the speech for?",
+            "required": true,
+            "type": "select"
+          },
+          {
+            "label": "Topic",
+            "name": "speechTopic",
+            "placeholder": "What is the topic of your speech?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Speech Objectives",
+            "name": "speechObjectives",
+            "placeholder": "What are the objectives of your speech?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Themes",
+            "name": "keyThemes",
+            "placeholder": "What are the key themes of your speech?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Speech Style",
+            "name": "speechStyle",
+            "options": [
+              "Conversational",
+              "Formal",
+              "Passionate",
+              "Humorous"
+            ],
+            "placeholder": "What style do you want your speech to have?",
+            "required": false,
+            "type": "select"
+          },
+          {
+            "label": "Target Audience",
+            "name": "targetAudience",
+            "placeholder": "Who is the target audience for your speech?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Special Requests",
+            "name": "specialRequests",
+            "placeholder": "Do you have any special requests for your speech?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-speech",
+        "Method": "POST",
+        "Name": "Speech",
+        "Route": "/speech",
+        "PageRoute": "/toolkit/copywriter/speech",
+        "Suggestions": [
+          "Speech for a Graduation Ceremony",
+          "Speech for a Corporate Event",
+          "Speech for a Wedding Toast"
+        ]
+      }
+    ]
+  },
+  "Business": {
+    "Baseroute": "/api/v1/toolkit/business",
+    "Category": "Business Tools",
+    "Options": [
+      {
+        "Description": "Compose a business proposal based on the objective, audience, and tone.",
+        "Fields": [
+          {
+            "label": "Objective",
+            "name": "proposalObjective",
+            "placeholder": "What is the objective of your proposal?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Target Audience",
+            "name": "audience",
+            "placeholder": "Who is the audience for your proposal?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Tone",
+            "name": "tone",
+            "options": [
+              "Persuasive",
+              "Professional"
+            ],
+            "placeholder": "What tone do you want your proposal to have?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-business-proposal",
+        "Method": "POST",
+        "Name": "Business Proposal",
+        "Route": "/biz-proposal",
+        "PageRoute": "/toolkit/executive/biz-proposal",
+        "Suggestions": [
+          "Proposal for a Marketing Campaign",
+          "Proposal for a New Product Launch",
+          "Proposal for a Partnership Opportunity"
+        ]
+      },
+      {
+        "Description": "Compose a Business Requirement Document based on the project name, objectives, requirements, and other details.",
+        "Fields": [
+          {
+            "label": "Project Name",
+            "name": "projectName",
+            "placeholder": "What is the name of your project?",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "label": "Objectives",
+            "name": "objectives",
+            "placeholder": "What are the objectives of your project?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Project Requirements",
+            "name": "requirements",
+            "placeholder": "What are the requirements for your project?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Deliverables",
+            "name": "deliverables",
+            "placeholder": "What are the deliverables of your project?",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": "Roles",
+            "name": "roles",
+            "placeholder": "What are the roles involved in your project?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Timelines",
+            "name": "timelines",
+            "placeholder": "What are the timelines for your project?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Tone",
+            "name": "tone",
+            "options": [
+              "Professional",
+              "Detailed"
+            ],
+            "placeholder": "What tone do you want your document to have?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-business-doc",
+        "Method": "POST",
+        "Name": "Business Requirement Document",
+        "Route": "/biz-requirement",
+        "PageRoute": "/toolkit/executive/biz-requirement",
+        "Suggestions": [
+          "Requirement Document for a Software Development Project",
+          "Requirement Document for a Website Redesign",
+          "Requirement Document for a Mobile App"
+        ]
+      },
+      {
+        "Description": "Generate an outline for a presentation based on the topic, number of slides, audience, purpose, and tone.",
+        "Fields": [
+          {
+            "label": "Topic",
+            "name": "topic",
+            "placeholder": "What is the topic of your presentation?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Slide Count",
+            "name": "numberOfSlides",
+            "placeholder": "How many slides do you want in your presentation?",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "label": "Target Audience",
+            "name": "audience",
+            "placeholder": "Who is the audience for your presentation?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Purpose",
+            "name": "purpose",
+            "placeholder": "What is the purpose of your presentation?",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": "Tone",
+            "name": "tone",
+            "options": [
+              "Casual",
+              "Professional",
+              "Educational"
+            ],
+            "placeholder": "What tone do you want your presentation to have?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-presentation",
+        "Method": "POST",
+        "Name": "Presentation Outline",
+        "Route": "/presentation",
+        "PageRoute": "/toolkit/executive/presentation",
+        "Suggestions": [
+          "Outline for a Sales Presentation",
+          "Outline for a Project Update Meeting",
+          "Outline for an Investor Pitch"
+        ]
+      }
+    ]
+  },
+  "SEO": {
+    "Baseroute": "/api/v1/toolkit/seo",
+    "Category": "SEO Tools",
+    "Options": [
+      {
+        "Description": "Generate a product description based on the product name, purpose, and keywords.",
+        "Fields": [
+          {
+            "label": "Product Name",
+            "name": "productName",
+            "placeholder": "What is the name of your product?",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "label": "Purpose",
+            "name": "purpose",
+            "placeholder": "What is the purpose of your product description?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Keywords",
+            "name": "listKeywords",
+            "placeholder": "What keywords would you like to include?",
+            "required": true,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-product-desc",
+        "Method": "POST",
+        "Name": "Product Description",
+        "Route": "/description",
+        "PageRoute": "/toolkit/seo/description",
+        "Suggestions": [
+          "SEO-optimized Description for an Electronic Gadget",
+          "SEO-optimized Description for a Clothing Item",
+          "SEO-optimized Description for a Kitchen Appliance"
+        ]
+      },
+      {
+        "Description": "Generate a blog post based on the topic, specific subject, keywords, and website name.",
+        "Fields": [
+          {
+            "label": "Blog Topic",
+            "name": "topic",
+            "placeholder": "What is the topic of your blog post?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Subject",
+            "name": "specificSubject",
+            "placeholder": "What is the specific subject of your blog post?",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "label": "Keywords",
+            "name": "listKeywords",
+            "placeholder": "What keywords would you like to include?",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "label": "Website Name",
+            "name": "websiteName",
+            "placeholder": "What is the name of your website?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-website-blog",
+        "Method": "POST",
+        "Name": "Website Blog",
+        "Route": "/blog",
+        "PageRoute": "/toolkit/seo/blog",
+        "Suggestions": [
+          "Blog Post about Travel Tips",
+          "Blog Post about Health and Wellness",
+          "Blog Post about Emerging Technologies"
+        ]
+      },
+      {
+        "Description": "Generate A/B test content based on the topic or source material, purpose, and keywords.",
+        "Fields": [
+          {
+            "label": "Topic / Source Material",
+            "name": "topicOrSourceMaterial",
+            "placeholder": "What is the topic or source material for your A/B test?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Purpose",
+            "name": "purpose",
+            "placeholder": "What is the purpose of your A/B test?",
+            "required": true,
+            "type": "text"
+          },
+          {
+            "label": "Keywords",
+            "name": "listKeywords",
+            "placeholder": "What keywords would you like to include?",
+            "required": false,
+            "type": "text"
+          }
+        ],
+        "Icon": "icon-article",
+        "Method": "POST",
+        "Name": "A/B Testing",
+        "Route": "/a-b-test",
+        "PageRoute": "/toolkit/seo/a-b-test",
+        "Suggestions": [
+          "A/B Test for Website Headlines",
+          "A/B Test for Product Page CTAs",
+          "A/B Test for Landing Page Layouts"
+        ]
+      }
+    ]
+  },
+  "Visualization": {
+    "Baseroute": "/api/v1/toolkit/dataviz",
+    "Category": "Data Visualization Tools",
+    "Options": [
+      {
+        "Description": "Generate an organizational chart based on the company type description, company name, and roles and relationships.",
+        "Fields": [
+          {
+            "label": "Company Type Description",
+            "name": "companyTypeDescription",
+            "placeholder": "What type of company is this chart for?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Company Name",
+            "name": "companyName",
+            "placeholder": "What is the name of the company?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Roles and Relationships",
+            "name": "rolesAndRelationships",
+            "placeholder": "Any specific details about roles and relationships?",
+            "required": false,
+            "type": "textarea"
+          }
+        ],
+        "Icon": "icon-organisation-chart",
+        "Method": "POST",
+        "Name": "Organization Chart",
+        "Route": "/org-chart",
+        "PageRoute": "/toolkit/dataviz/org-chart",
+        "Suggestions": [
+          "Organization Chart for a Corporate Structure",
+          "Organization Chart for a Non-Profit Organization",
+          "Organization Chart for a Small Business Team"
+        ]
+      },
+      {
+        "Description": "Generate a process flow chart based on the process description, process name, and steps and details.",
+        "Fields": [
+          {
+            "label": "Process Description",
+            "name": "processDescription",
+            "placeholder": "Describe the process for which you want the flow chart.",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Process Name",
+            "name": "processName",
+            "placeholder": "What is the name of the process?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Steps and Details",
+            "name": "stepsAndDetails",
+            "placeholder": "Any specific details about steps and details?",
+            "required": false,
+            "type": "textarea"
+          }
+        ],
+        "Icon": "icon-flow-chart",
+        "Method": "POST",
+        "Name": "Process Flow Chart",
+        "Route": "/process-flow",
+        "PageRoute": "/toolkit/dataviz/process-flow",
+        "Suggestions": [
+          "Flow Chart for a Customer Onboarding Process",
+          "Flow Chart for a Manufacturing Workflow",
+          "Flow Chart for a Software Development Lifecycle"
+        ]
+      },
+      {
+        "Description": "Generate a mindmap based on the mindmap topic, mindmap name, purpose, and details.",
+        "Fields": [
+          {
+            "label": "Mindmap Topic",
+            "name": "mindmapTopic",
+            "placeholder": "What is the topic of the mindmap?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Mindmap Name",
+            "name": "mindmapName",
+            "placeholder": "What is the name of the mindmap?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Mindmap Purpose",
+            "name": "mindmapPurpose",
+            "placeholder": "What is the purpose of the mindmap?",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": "Mindmap Details",
+            "name": "mindmapDetails",
+            "placeholder": "Any additional details for the mindmap?",
+            "required": false,
+            "type": "textarea"
+          }
+        ],
+        "Icon": "icon-mind-map",
+        "Method": "POST",
+        "Name": "Mindmap",
+        "Route": "/mindmap",
+        "PageRoute": "/toolkit/dataviz/mindmap",
+        "Suggestions": [
+          "Mindmap for a Product Development Idea",
+          "Mindmap for a Marketing Strategy",
+          "Mindmap for Personal Goal Setting"
+        ]
+      }
+    ]
+  },
+  "Design Image": {
+    "Baseroute": "/api/v1/toolkit/image",
+    "Category": "Image Tools",
+    "Options": [
+      {
+        "Description": "Generate art/illustrations based on an artistic concept",
+        "Fields": [
+          {
+            "label": "Prompt",
+            "name": "prompt",
+            "placeholder": "What is the main prompt for the image generation?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Description",
+            "name": "description",
+            "placeholder": "Any additional description for the image?",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": "Art Style",
+            "name": "artStyle",
+            "placeholder": "What style of art do you want?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Mood/Tone",
+            "name": "artMoodTone",
+            "placeholder": "What mood or tone do you want for the art?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Image Count",
+            "name": "imageCount",
+            "placeholder": "How many images do you want to generate?",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "label": "Aspect Ratio",
+            "name": "aspectRatio",
+            "options": [
+              "1:1",
+              "4:3",
+              "16:9",
+              "3:4",
+              "9:16"
+            ],
+            "placeholder": "What aspect ratio do you want for the images?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-art",
+        "Method": "POST",
+        "Name": "Art Illustration",
+        "Route": "/creative/art-illustration",
+        "PageRoute": "/toolkit/image/art-illustration",
+        "Suggestions": []
+      },
+      {
+        "Description": "Generate visual concepts for campaigns or products",
+        "Fields": [
+          {
+            "label": "Product Description",
+            "name": "productDescription",
+            "placeholder": "Describe the product or campaign",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Audience",
+            "name": "audience",
+            "placeholder": "Who is the target audience?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Style",
+            "name": "style",
+            "placeholder": "What style do you want?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Mood",
+            "name": "mood",
+            "placeholder": "What mood do you want?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Image Count",
+            "name": "imageCount",
+            "placeholder": "How many images do you want to generate?",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "label": "Aspect Ratio",
+            "name": "aspectRatio",
+            "options": [
+              "1:1",
+              "4:3",
+              "16:9",
+              "3:4",
+              "9:16"
+            ],
+            "placeholder": "What aspect ratio do you want for the images?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-visual-concept",
+        "Method": "POST",
+        "Name": "Visual Concept",
+        "Route": "/creative/visual-concept",
+        "PageRoute": "/toolkit/image/visual-concept",
+        "Suggestions": []
+      },
+      {
+        "Description": "Generate scene visualizations based on a scene description",
+        "Fields": [
+          {
+            "label": "Scene Description",
+            "name": "sceneDescription",
+            "placeholder": "What is the description of the scene?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Characters",
+            "name": "characters",
+            "placeholder": "Any details about the characters in the scene?",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": "Setting Details",
+            "name": "settingDetails",
+            "placeholder": "Any details about the setting of the scene?",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": "Image Count",
+            "name": "imageCount",
+            "placeholder": "How many images do you want to generate?",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "label": "Aspect Ratio",
+            "name": "aspectRatio",
+            "options": [
+              "1:1",
+              "4:3",
+              "16:9",
+              "3:4",
+              "9:16"
+            ],
+            "placeholder": "What aspect ratio do you want for the images?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-screen-visual",
+        "Method": "POST",
+        "Name": "Scene Visualization",
+        "Route": "/storyteller/scene-visualization",
+        "PageRoute": "/toolkit/image/scene-visualization",
+        "Suggestions": []
+      },
+      {
+        "Description": "Generate cover art based on a theme description",
+        "Fields": [
+          {
+            "label": "Theme Description",
+            "name": "themeDescription",
+            "placeholder": "What is the theme description for the cover art?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Title",
+            "name": "title",
+            "placeholder": "What is the title of the project?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Symbols/Motifs",
+            "name": "symbolsOrMotifs",
+            "placeholder": "Any symbols or motifs to include in the cover art?",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": "Color Scheme",
+            "name": "colorScheme",
+            "placeholder": "What color scheme do you want for the cover art?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Image Count",
+            "name": "imageCount",
+            "placeholder": "How many images do you want to generate?",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "label": "Aspect Ratio",
+            "name": "aspectRatio",
+            "options": [
+              "1:1",
+              "4:3",
+              "16:9",
+              "3:4",
+              "9:16"
+            ],
+            "placeholder": "What aspect ratio do you want for the images?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-cover-art",
+        "Method": "POST",
+        "Name": "Cover Art",
+        "Route": "/storyteller/cover-art",
+        "PageRoute": "/toolkit/image/cover-art",
+        "Suggestions": []
+      },
+      {
+        "Description": "Generate visuals for presentations or reports based on a description",
+        "Fields": [
+          {
+            "label": "Description",
+            "name": "description",
+            "placeholder": "What is the description of the presentation or report?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Title",
+            "name": "title",
+            "placeholder": "What is the title of the presentation or report?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Elements/Symbols",
+            "name": "elementsOrSymbols",
+            "placeholder": "Any elements or symbols to include in the visuals?",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": "Style",
+            "name": "style",
+            "placeholder": "What style do you want for the visuals?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Image Count",
+            "name": "imageCount",
+            "placeholder": "How many images do you want to generate?",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "label": "Aspect Ratio",
+            "name": "aspectRatio",
+            "options": [
+              "1:1",
+              "4:3",
+              "16:9",
+              "3:4",
+              "9:16"
+            ],
+            "placeholder": "What aspect ratio do you want for the images?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-present-visual",
+        "Method": "POST",
+        "Name": "Presentation Visuals",
+        "Route": "/business/presentation-visuals",        
+        "PageRoute": "/toolkit/image/presentation-visuals",
+        "Suggestions": []
+      },
+      {
+        "Description": "Generate product concept images based on a product concept",
+        "Fields": [
+          {
+            "label": "Product Concept",
+            "name": "productConcept",
+            "placeholder": "What are the details of the concept of the product?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Purpose",
+            "name": "purpose",
+            "placeholder": "What is the future purpose of the product image?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Target Audience",
+            "name": "targetAudience",
+            "placeholder": "Who is the target audience for the product?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Style",
+            "name": "style",
+            "placeholder": "What style do you want for the product image?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Image Count",
+            "name": "imageCount",
+            "placeholder": "How many images do you want to generate?",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "label": "Aspect Ratio",
+            "name": "aspectRatio",
+            "options": [
+              "1:1",
+              "4:3",
+              "16:9",
+              "3:4",
+              "9:16"
+            ],
+            "placeholder": "What aspect ratio do you want for the images?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-product-concept",
+        "Method": "POST",
+        "Name": "Product Concept Image",
+        "Route": "/business/product-visuals",
+        "PageRoute": "/toolkit/image/product-visuals",
+        "Suggestions": []
+      },
+      {
+        "Description": "Generate marketing campaign visuals based on a campaign message",
+        "Fields": [
+          {
+            "label": "Campaign Message",
+            "name": "campaignMessage",
+            "placeholder": "What is the message or theme of the marketing campaign?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Subject Being Advertised",
+            "name": "subjectBeingAdvertised",
+            "placeholder": "What is the subject of the advertisement?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Target Audience",
+            "name": "targetAudience",
+            "placeholder": "Who is the target audience for the marketing campaign?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Style",
+            "name": "style",
+            "placeholder": "What style do you want for the visuals?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Image Count",
+            "name": "imageCount",
+            "placeholder": "How many images do you want to generate?",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "label": "Aspect Ratio",
+            "name": "aspectRatio",
+            "options": [
+              "1:1",
+              "4:3",
+              "16:9",
+              "3:4",
+              "9:16"
+            ],
+            "placeholder": "What aspect ratio do you want for the images?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-market-visual",
+        "Method": "POST",
+        "Name": "Marketing Visuals",
+        "Route": "/business/campaign-visuals",
+        "PageRoute": "/toolkit/image/campaign-visuals",
+        "Suggestions": []
+      },
+      {
+        "Description": "Generate social media posts based on a post description",
+        "Fields": [
+          {
+            "label": "Post Description",
+            "name": "postDescription",
+            "placeholder": "What is the description of the social media post?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Style",
+            "name": "style",
+            "placeholder": "What style do you want for the post?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Mood",
+            "name": "mood",
+            "placeholder": "What mood do you want for the post?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Image Count",
+            "name": "imageCount",
+            "placeholder": "How many images do you want to generate?",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "label": "Aspect Ratio",
+            "name": "aspectRatio",
+            "options": [
+              "1:1",
+              "4:3",
+              "16:9",
+              "3:4",
+              "9:16"
+            ],
+            "placeholder": "What aspect ratio do you want for the images?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-Social-media",
+        "Method": "POST",
+        "Name": "Social Media",
+        "Route": "/influencer/social-media-post",
+        "PageRoute": "/toolkit/image/social-media-post",
+        "Suggestions": []
+      },
+      {
+        "Description": "Generate blog illustrations based on a blog post topic",
+        "Fields": [
+          {
+            "label": "Blog Post Topic",
+            "name": "blogPostTopic",
+            "placeholder": "What is the topic of the blog post?",
+            "required": true,
+            "type": "textarea"
+          },
+          {
+            "label": "Elements/Symbols",
+            "name": "elementsOrSymbols",
+            "placeholder": "Any elements or symbols to include in the blog illustration?",
+            "required": false,
+            "type": "textarea"
+          },
+          {
+            "label": "Color Scheme",
+            "name": "colorScheme",
+            "placeholder": "What color scheme do you want for the blog illustration?",
+            "required": false,
+            "type": "text"
+          },
+          {
+            "label": "Image Count",
+            "name": "imageCount",
+            "placeholder": "How many images do you want to generate?",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "label": "Aspect Ratio",
+            "name": "aspectRatio",
+            "options": [
+              "1:1",
+              "4:3",
+              "16:9",
+              "3:4",
+              "9:16"
+            ],
+            "placeholder": "What aspect ratio do you want for the images?",
+            "required": false,
+            "type": "select"
+          }
+        ],
+        "Icon": "icon-blog",
+        "Method": "POST",
+        "Name": "Blog Illustration",
+        "Route": "/influencer/blog-illustration",
+        "PageRoute": "/toolkit/image/blog-illustration",
+        "Suggestions": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+    "tabs" : ["week 1","week 2", "tips"],
+    "data" : {
+        "week 1": {
+        "title" : "Topic : Emerging Tech Trends",
+        "column_titles" : ["Platform", "Day", "Post Idea", "Caption", "Hashtags", "Image / Video Transcript"],
+        "row_data" :[
+            {
+                "Platform": "icon-insta",
+                "Day" : "Mon", 
+                "PostIdea":"Image: Futuristic cityscape with flying cars", 
+                "Caption":"Buckle up, folks! What tech do you think will shape our cities in the next decade? Let us know in the comments! 👇 #futureoftech #smartcities #innovation #technology", 
+                "Hashtags": ["#futureoftech", "#smartcities"], 
+                "Image_Video_Transcript":"Futuristic cityscape with flying cars and holographic advertisements"
+            },
+            {
+                "Platform": "icon-linkedin",
+                "Day" : "Mon", 
+                "PostIdea":"Image: Futuristic cityscape with flying cars", 
+                "Caption":"Buckle up, folks! What tech do you think will shape our cities in the next decade? Let us know in the comments! 👇 #futureoftech #smartcities #innovation #technology", 
+                "Hashtags": ["#futureoftech", "#smartcities"], 
+                "Image_Video_Transcript":"Futuristic cityscape with flying cars and holographic advertisements"
+            }
+        ]
+       },
+       "week 2": {
+        "title" : "Topic : Emerging Tech Trends",
+        "column_titles" : ["Platform", "Day", "Post Idea", "Caption", "Hashtags", "Image / Video Transcript"],
+        "row_data" :[
+            {
+                "Platform": "icon-insta",
+                "Day" : "Mon", 
+                "PostIdea":"Image: Futuristic cityscape with flying cars", 
+                "Caption":"Buckle up, folks! What tech do you think will shape our cities in the next decade? Let us know in the comments! 👇 #futureoftech #smartcities #innovation #technology", 
+                "Hashtags": ["#futureoftech", "#smartcities"], 
+                "Image_Video_Transcript":"Futuristic cityscape with flying cars and holographic advertisements"
+            },
+            {
+                "Platform": "icon-linkedin",
+                "Day" : "Mon", 
+                "Post Idea":"Image: Futuristic cityscape with flying cars", 
+                "Caption":"Buckle up, folks! What tech do you think will shape our cities in the next decade? Let us know in the comments! 👇 #futureoftech #smartcities #innovation #technology", 
+                "Hashtags": ["#futureoftech", "#smartcities"], 
+                "Image_Video_Transcript":"Futuristic cityscape with flying cars and holographic advertisements"
+            }
+        ]
+       }
+    }
+}

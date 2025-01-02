@@ -1,0 +1,19 @@
+@use '../../assets/sass/global/config.scss' as *;
+@use '../../assets/sass/global/variable.scss' as *;
+
+.cp-login-header{
+    padding: 1.6rem;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 2.1rem;
+    .logo-wrap{
+        width: 8.2rem;
+        height: 6rem;
+              
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

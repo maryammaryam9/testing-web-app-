@@ -1,0 +1,32 @@
+@use '../../../assets/sass/global/config.scss' as *;
+@use '../../../assets/sass/global/variable.scss' as *;
+
+.loader {
+	align-items: center;
+	display: flex;
+	justify-content: flex-start;
+    gap: 0.4rem;
+	width: 100%;
+    padding: 2rem 0;
+    .dots {
+        animation: dot ease-in-out 1s infinite;
+        background: #000099;
+        opacity: 1;
+        display: inline-block;
+        @include border-radius(50%);
+        height: 0.8rem;
+        width: 0.8rem;
+        &:nth-of-type(2) {
+            animation-delay: 0.2s;
+        }
+        &:nth-of-type(3) {
+            animation-delay: 0.3s;
+        }
+    }
+}
+
+@keyframes dot {
+    0% {opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0.3; }
+  }

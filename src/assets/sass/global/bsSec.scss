@@ -1,0 +1,61 @@
+@use '../global/config.scss' as *;
+@use '../global/variable.scss' as *;
+
+.bs-sec {
+  padding: 4.4rem 0px;
+
+  .sec-head {
+    margin-bottom: 2.4rem;
+  }
+
+  .sec-cont {
+    position: relative;
+  }
+
+  .sec-title {
+    font-size: 4.4rem;
+    line-height: 3rem;
+    letter-spacing: -2px;
+    font-family: $font-bold;
+    color: $clr-base;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .sec-desc {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    font-family: $font-medium;
+    color: #626262;
+    letter-spacing: -1px;
+  }
+
+  .sec-sub-desc {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+  }
+
+  &.typ-login{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    right: 10rem;
+    @include transform(translateY(-50%));
+    padding: 0;
+    right: 10rem;
+    z-index: 10;
+  }
+
+  &.typ-home{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    // background: url('../../images/bg-landing.png') 0 0 no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}

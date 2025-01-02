@@ -1,0 +1,31 @@
+{
+    "api/login":[
+        {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+            "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+            "user": {
+              "id": "123",
+              "name": "John Doe",
+              "email": "user@example.com",
+              "role": "Member",
+              "tracking_id": "G-XXXXXXXXXX"
+            }
+          }
+    ],
+    "api/check-user": [
+        {
+            "exists": true,
+            "message": "User exists"
+        }
+    ],
+    "api/validate-otp":[
+        {
+            "message": "OTP validated successfully"
+        }
+    ],
+    "api/otp": [
+        {
+            "message": "OTP sent successfully"
+        }
+    ]
+}

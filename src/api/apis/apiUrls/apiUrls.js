@@ -1,0 +1,12 @@
+export const LOGIN_URL = "/login";
+export const LOGOUT_URL = "/logout";
+export const USER_EXIST_URL = "/check-user";
+export const USER_OTP_VERIFY_URL = "/validate-otp";
+export const USER_GET_OTP_URL = "/otp";
+export const OPTION_DATA = "/option-data";
+export const USER_HISTORY_URL = "/user-history/";
+export const DOWNLOAD_FILE = "/api/v1/md2any";
+export const CHAT_HISTORY_URL = "/chat-history/";
+export const OPEN_SEARCH_CHAT = "/api/v1/openresearch/chat";
+export const OPEN_SEARCH_CHAT_CRISP = "/api/v1/utils/flash";
+export const SAVE_MY_SPOT ="/save-my-post";

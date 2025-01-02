@@ -1,0 +1,190 @@
+@use '../../assets/sass/global/config.scss' as *;
+@use '../../assets/sass/global/variable.scss' as *;
+
+.CpTabs {
+
+    .tab-menu {
+        display: flex;
+        list-style: none;
+        // border: 1px solid #E5E5E5;
+        @include border-radius(1.2rem 1.2rem 0px 0px);
+        // border-width: 1px 1px 0px 1px;
+        // max-width: 49.3rem;
+        justify-content: flex-start;
+
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        li {
+            box-sizing: border-box;
+            float: left;
+            background-color: $clr-root;
+            text-align: center;
+            padding: 1.2rem 2rem;
+            cursor: pointer;
+            font-family: $font-regular;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            display: flex;
+            gap: 0.8rem;
+            border-left: 1px solid #F3F5F7;
+            border-top: 1px solid #F3F5F7;
+            border-bottom: 1px solid #F3F5F7;
+
+            &:last-child {
+                @include border-radius (0 1.2rem 0px 0px);
+                border-right: 1px solid #F3F5F7;
+                
+            }
+
+            &:first-child {
+                @include border-radius(1.2rem 0 0px 0px);
+            }
+
+            &:hover:not(.active) {
+                color: $clr-icon;
+            }
+
+            .icon {
+                width: 2.4rem;
+                height: 2.4rem;
+                font-size: 2.4rem;
+                // background: #ccc;
+            }
+
+        }
+
+        .active {
+            background-color:  #F3F5F7;
+            cursor: default;
+            color: #333333;
+        }
+    }
+
+
+    .tab-container {
+        box-sizing: border-box;
+        border: 1px solid #E5E5E5;
+        @include border-radius(0 0 1.2rem 1.2rem);
+
+
+    }
+    .tab-panel {
+        display: none;
+        background-color: #fff;
+        .table-responsive {
+            @include border-radius(0 0 1.2rem 1.2rem);
+            @media only screen and (max-width: $media-mobile) {
+             
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+            }
+        }
+
+        .table {
+            width: 100%;
+
+            caption {
+                font-family: $font-bold;
+                color: #4D4D4D;
+                font-size: 1.6rem;
+                text-align: left;
+                padding: 1.2rem;
+            }
+
+            thead {
+                th {
+                    color: $clr-base;
+                    text-align: center;
+                    padding: 0.8rem;
+                    background-color: #E5E5E5;
+                    font-family: $font-medium;
+                    font-size: 1.4rem;
+                    text-align: left;
+                }
+            }
+
+            tbody {
+                tr {
+                   
+                    &:nth-child(4n + 1) td,
+                    &:nth-child(4n + 2) td {
+                        background-color:$clr-root;;
+                    }
+                    
+                    &:nth-child(4n + 3) td,
+                    &:nth-child(4n + 4) td {
+                        background-color:#F8FAFB;
+                    }
+                    td {
+                        padding: 1.2rem 0.8rem;
+                        font-size: 1.6rem;
+                        color: #666666;
+                        line-height: 2.4rem;
+                        text-align: left;
+                        vertical-align: top;
+
+                        &:first-child {
+                            text-align: center;
+                        }
+
+                        .post-title {
+                            font-size: 1.4rem;
+                            color: #1A1A1A;
+                            display: block;
+                            font-family: $font-medium;
+                        }
+
+                        .hashtag {
+                            display: block;
+                        }
+
+                        .icon {
+                            @include border-radius(50%);
+                            background-color: #F3F5F7;
+                            width: 3.6rem;
+                            height: 3.6rem;
+                            line-height: 3.6rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1.8rem;
+                            position: relative;
+                            color: $clr-base;
+                            padding: 0.6rem;
+                            margin: auto;
+                        }
+                    }
+
+                }
+            }
+
+        }
+        &.active {
+            display: block;
+          }
+    }
+    .head-wrap{
+        display: flex;
+        margin-bottom: 2rem;
+        justify-content: space-between;
+        align-items: flex-start;
+        .tab-title{
+            font-size: 2rem;
+            line-height: 2.4rem;
+            font-family: $font-medium;
+            color: #1A1A1A;
+            width: 70%;
+            text-align: left;
+        }
+        .iocn-list{
+            margin-top: 0rem;
+        }
+    }
+}
+

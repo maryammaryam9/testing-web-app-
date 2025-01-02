@@ -1,0 +1,85 @@
+@use '../../assets/sass/global/config.scss' as *;
+@use '../../assets/sass/global/variable.scss' as *;
+
+.cp-welcome-panel{
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    // height: 100%;
+    text-align: center;
+    transition: all 0.8s ease-in;  
+    min-height: 40.5rem;
+    position: absolute;
+    margin: auto;
+    top: 30%;
+
+    &.open{
+        margin-left: 14rem;
+    }
+    .head-wrap{
+        margin-bottom: 4rem;
+        .title{
+            font-family: $font-medium;
+            font-size: 3.2rem;
+            line-height: 3.8rem;
+            // color: $clr-base;
+            margin-bottom: 0.8rem;
+            background: linear-gradient(90deg, #E48415 0%, #C84C31 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .desc{
+            font-family: $font-regular;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            color: #4D4D4D;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: $media-mobile) {
+
+
+    .cp-welcome-panel{
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        // height: 100%;
+        text-align: center;
+        transition: all 0.8s ease-in;  
+        min-height: 40.5rem;
+        position: absolute;
+        margin: auto;
+        top: 30%;
+        width:100%;
+    
+        &.open{
+            margin-left: 14rem;
+        }
+        .head-wrap{
+            margin-bottom: 4rem;
+            .title{
+                font-family: $font-medium;
+                font-size: 3.2rem;
+                line-height: 3.8rem;
+                // color: $clr-base;
+                margin-bottom: 0.8rem;
+                background: linear-gradient(90deg, #E48415 0%, #C84C31 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .desc{
+                font-family: $font-regular;
+                font-size: 2rem;
+                line-height: 2.4rem;
+                color: #4D4D4D;
+            }
+        }
+    }
+    
+
+}

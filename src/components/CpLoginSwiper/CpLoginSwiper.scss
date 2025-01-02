@@ -1,0 +1,32 @@
+@use '../../assets/sass/global/config.scss' as *;
+@use '../../assets/sass/global/variable.scss' as *;
+.new-login-container{
+    position: relative;
+    height: 100%;
+    .login-image{
+        img{height: 100%;}
+        height: 100%;
+    }
+}
+
+.cp-login-swiper{
+    position: absolute; 
+    bottom: 5rem;
+    left: 4rem;
+    z-index: 3;
+    .swiper-card{
+        .title{
+            font-family: $font-bold;
+            font-size: 4.8rem;
+            line-height: 5.8rem;
+            color: $clr-root;
+            margin-bottom: 1.2rem;
+        }
+        .desc{
+            font-family: $font-medium;
+            font-size: 3rem;
+            line-height: 3.8rem;
+            color: $clr-root;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@use '../../../assets/sass/global/config.scss' as *;
+@use '../../../assets/sass/global/variable.scss' as *;
+
+.sidebar{
+    padding: 9.6rem 1.6rem 2rem;
+    width: 28rem;
+    height: 100vh;
+    box-shadow: 0px 0px 20px 0px #5A5DF514;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: all 0.8s ease-in;  
+    .history{
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        height: 100%;
+    }
+    &.open{
+        box-shadow: 0px 0px 20px 0px #5A5DF514;
+        left: 0;
+    }
+    .history-title{
+        font-family: $font-bold;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        margin: 0 0.8rem 1.4rem;
+        color: #1A1A1A;
+        text-transform: uppercase;
+    }
+    .history-list{
+        margin-bottom: 3.2rem;
+        .history-item{
+            .history-link{
+                padding: 0.8rem 0.8rem;
+                font-family: $font-regular;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                color: #4D4D4D;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                cursor: pointer;
+            }
+        }
+    }
+}

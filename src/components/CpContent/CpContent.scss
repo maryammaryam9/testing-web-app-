@@ -1,0 +1,66 @@
+@use '../../assets/sass/global/config.scss' as *;
+@use '../../assets/sass/global/variable.scss' as *;
+
+.cp-content {
+    @include border-radius(2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 71%;
+    position: relative;
+    top: 8rem;
+    right: 1.6rem;
+    padding: 0;
+    margin-left: 2rem;
+    height: 85vh;
+    background-color: #fff;
+
+    &.grey-bg {
+        background-color: #F8FAFB;
+        border-radius: none;
+   
+    }
+
+    .content-detail {
+        font-family: $font-regular;
+
+        .img-wrap {
+            max-width: 17rem;
+            margin: auto;
+
+            &.mw-20 {
+                max-width: 20rem;
+            }
+
+            &.mw-32 {
+                max-width: 32.2rem;
+            }
+        }
+
+        .detail-wrap {
+            text-align: center;
+
+            .title {
+                font-size: 2rem;
+                color: $clr-base;
+                text-transform: uppercase;
+                margin: 2rem 0 0.4rem 0;
+                font-weight: 700;
+
+                &.grey-title {
+                    color: #999999;
+                }
+            }
+
+            .description {
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                color: #666666;
+
+                &.grey-description {
+                    color: #999999;
+                }
+            }
+        }
+    }
+}
