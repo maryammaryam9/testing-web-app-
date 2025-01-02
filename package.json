@@ -56,6 +56,5 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
-  },
-  "proxy": "https://dev2-pulse.officeofananyabirla.com"
+  }
 }
